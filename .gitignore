@@ -1,0 +1,4 @@
+obj/
+bin/
+Factory/appsettings.json
+.vscode
