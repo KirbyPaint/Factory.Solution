@@ -5,7 +5,7 @@
 @model Factory.Models.Engineer
 
 <h1>Engineer Details: @Html.DisplayFor(model => model.FullName)</h1>
-<hr />
+<hr>
 <p>@Html.DisplayFor(model => model.LastName), @Html.DisplayFor(model => model.FirstName)</p>
 
 @if(@Model.JoinEntities.Count == 0)
