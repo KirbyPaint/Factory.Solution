@@ -20,8 +20,6 @@
   <p>Last name:
   @Html.TextBoxFor(model => model.LastName, new { @required="required" })</p>
 
-  @* IF TIME PERMITS
-  Add some way to validate that machines exist before presenting this drop-down *@
   @Html.Label("Add new Machine")
   @Html.DropDownList("MachineId")
 
