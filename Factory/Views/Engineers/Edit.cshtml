@@ -4,9 +4,9 @@
 
 @model Factory.Models.Engineer
 
-<h2>Edit</h2>
+<h1>Edit</h1>
 
-<h4>Edit this Engineer: @Html.DisplayFor(model => model.FullName)</h4>
+<p>Edit this Engineer: @Html.DisplayFor(model => model.FullName)</p>
 
 @using (Html.BeginForm())
 {
@@ -26,4 +26,4 @@
   <input type="submit" value="Save" class="btn btn-default">
 }
 
-<p>@Html.ActionLink("Back to Engineers list", "Index")</p>
+@Html.ActionLink("Back to all engineers", "Index")
