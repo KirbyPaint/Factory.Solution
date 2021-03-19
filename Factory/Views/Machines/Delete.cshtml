@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h1>Delete Record</h1>
+
+<p>Are you sure you want to delete @Html.DisplayFor(model => model.MachineName)?</p>
+
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete" class="btn btn-default">
+}
+@Html.ActionLink("Back to List", "Index")
