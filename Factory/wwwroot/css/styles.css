@@ -1,3 +1,24 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: aliceblue;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a:link {
+  color: green;
+}
+
+a:hover {
+  color: blue;
+}
+
+a:visited {
+  color: red;
+}
+
 div#footer {
   position:fixed;
   bottom:0px;
