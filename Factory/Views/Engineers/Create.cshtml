@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h1>Add Engineer to Database</h1>
+
+@using (Html.BeginForm())
+{
+  <p>First name:
+  @Html.TextBoxFor(model => model.FirstName, new { @required="required" })</p>
+
+  <p>Last name:
+  @Html.TextBoxFor(model => model.LastName, new { @required="required" })</p>
+
+  @* Engineer can exist without a machine at start - can be assigned one later
+  
+  @Html.Label("Machines this engineer is licensed to operate on:")
+  @Html.DropDownList("MachineId") *@
+
+  <input type="submit" value="Add this engineer to database" class="btn btn-default" />
+}
+
+<p>@Html.ActionLink("Back to all engineers", "Index")</p>
