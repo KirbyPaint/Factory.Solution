@@ -2,3 +2,4 @@ obj/
 bin/
 Factory/appsettings.json
 .vscode
+CHANGES.txt
