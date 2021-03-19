@@ -50,17 +50,25 @@ Where the text says `database=[DATABASE_NAME]`, enter your own database's name, 
 Where the text says `pwd=[YOUR PASSWORD]`, enter your own secure password, and remove the brackets. If your password is `SafePassword123` this code will look like `pwd=SafePassword123`  
 This ensures that the program will be able to read and write to your own local database.
 
-### Setting Up Local Database
-
-
-
 ### After everything is set up
 
 Once you have properly navigated to the project directory (`<your directory>\Factory.Solution\Factory`), your appsettings.json file has been created, and your local server has been set up, type:
 
 `dotnet restore`
 
-followed by
+The program should automatically restore all necessary packages.  
+
+Note: This program does come with a "Migrations" folder, but if that folder is missing, please run the following command:
+
+`dotnet ef migrations add Initial`
+
+If the Migrations folder already exists in the project structure, skip this step and enter this next command:
+
+`dotnet ef database update`
+
+to fully apply the database structure.
+
+Once all of the previous steps are applied, enter the following:
 
 `dotnet run`
 
@@ -75,6 +83,10 @@ Application started. Press Ctrl+C to shut down.
 Once you see this in the terminal, you will be able to open the web page as a link in your browser. Copy either URL and paste it in the browser. If you choose the `https://localhost:5001` link, the browser will likely attempt to protect you by informing you this site has no certificates. That is true; simply bypass the site's warning, or use the unsecured hyperlink `http://localhost:5000` instead.  
 
 ## How To Use The Program
+
+The program will display a link to create new Engineer entries and new Machine entries. Under both sections, you will be able to create, edit, view, and delete Engineer and Machine entries.  
+Under the Engineers section, if you select an individual Engineer's name, you will be taken to their Details page, where you may register a new Machine (if one exists) to that Engineer, Edit their details, or Delete that Engineer.
+Under the Machines section, if you select an individual Machine, you are able to see which Engineers are currently licensed to repair that Machine. You are also able to see if the machine is "Currently Operational", by way of a check box. Under the Edit section of the Machine, you are able to configure whether this Machine is currently operational or not.
 
 All pages will contain a link back to the Home page.  
 
