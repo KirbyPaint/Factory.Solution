@@ -26,13 +26,14 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Engineer item, int MachineId)
+    public ActionResult Create(Engineer engineer, int MachineId)
     {
-      _db.Engineers.Add(item);
+      engineer.FullName = (engineer.FirstName + " " + engineer.LastName);
+      _db.Engineers.Add(engineer);
       _db.SaveChanges();
       if (MachineId != 0)
       {
-        _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = item.EngineerId });
+        _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = engineer.EngineerId });
       }
       _db.SaveChanges();
       return RedirectToAction("Index");
