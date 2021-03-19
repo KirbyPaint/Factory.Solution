@@ -10,18 +10,17 @@
 
 @using (Html.BeginForm())
 {
-  <p>First name:
+  <p>@Html.Label("First Name:")
   @Html.TextBoxFor(model => model.FirstName, new { @required="required" })</p>
 
-  <p>Last name:
+  <p>@Html.Label("Last Name:")
   @Html.TextBoxFor(model => model.LastName, new { @required="required" })</p>
 
-  @* Engineer can exist without a machine at start - can be assigned one later
-  
-  @Html.Label("Machines this engineer is licensed to operate on:")
-  @Html.DropDownList("MachineId") *@
-
-  <input type="submit" value="Add this engineer to database" class="btn btn-default" />
+  <input type="submit" value="Confirm" class="btn btn-default">
 }
 
-<p>@Html.ActionLink("Back to all engineers", "Index")</p>
+<hr>
+
+<p>@Html.ActionLink("Back to Engineers List", "Index")</p>
+
+<hr>

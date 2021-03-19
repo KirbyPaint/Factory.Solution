@@ -24,13 +24,21 @@ else
     @using (Html.BeginForm("DeleteMachine", "Engineers"))
     {
       @Html.Hidden("joinId", @join.EngineerMachineId)
-      <input type="submit" value="Delete"/>
+      <input type="submit" value="Delete" class="btn btn-default">
     }
   }
   </ul>
 }
 
 <p>@Html.ActionLink("Register Machine for this Engineer", "AddMachine", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Back to all engineers", "Index")</p>
+
+<hr>
+
 <p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</p>
 <p>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</p>
+
+<hr>
+
+<p>@Html.ActionLink("Back to Engineers List", "Index")</p>
+
+<hr>
