@@ -8,11 +8,6 @@
 
 <hr>
 
-@if(@Model.JoinEntities.Count == 0)
-{
-  <p>There are no Machines in the database to repair yet.</p>
-}
-
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.EngineerId)
